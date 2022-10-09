@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #1a212e;
+  background: url('./Banner.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #f05768;
+}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
