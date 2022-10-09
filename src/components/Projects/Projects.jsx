@@ -15,19 +15,19 @@ const mockProjects = [
 		name: "Iza",
 		description: "Robot Educativo para la enseñanza de STEAM",
 		img: "https://miro.medium.com/max/720/1*XOSduao7nmUZUpRmjt4zeg.jpeg",
-		stack: ['Arduino Nano', 'C++', 'Bloques', 'Sensores', 'Actuadores']
+		references: ['Arduino Nano', 'C++', 'Bloques', 'Sensores', 'Actuadores']
 	},
 	{
 		name: "Chimalli",
 		description: "Shield para Raspberry Pi",
 		img: "https://miro.medium.com/max/720/1*XOSduao7nmUZUpRmjt4zeg.jpeg",
-		stack: ['Raspberry Pi', 'Python ', 'IoT', 'Sensores', 'Actuadores']
+		references: ['Raspberry Pi', 'Python ', 'IoT', 'Sensores', 'Actuadores']
 	}
 ]
 
 const Project = (props) => {
     return (
-			<Paper sx={{background: '#1a212e' }}>
+			<Paper sx={{ background: '#1a212e' }}>
 				<Card sx={{ maxWidth: '100%', minHeight: '250px' }}>
 					<CardActionArea>
 						<CardMedia
@@ -52,16 +52,16 @@ const Project = (props) => {
 
 const Projects = () => {
     return (
-        <>
-					<Divider textAlign="left" sx={{ color: pinkColor, borderColor: pinkColor, paddingTop: '30px', paddingBottom: '30px' }}>
+      <>
+        <Divider textAlign="left" sx={{ color: pinkColor, borderColor: pinkColor, paddingTop: '30px', paddingBottom: '30px' }}>
             <Chip label="Projects" sx={{ color: '#00c5b9', fontWeight: 'bold' , backgroundColor: 'rgba(26, 33, 46, 0.975)' }}/>
-          </Divider>
-					{
-						<Carousel>
-							{ mockProjects.map((item, value) => <Project key={value} item={item} /> ) }
-						</Carousel>
-    			}
-        </>
+        </Divider>
+        {
+          <Carousel>
+            { mockProjects.map((item, value) => <Project key={value} item={item} /> ) }
+          </Carousel>
+        }
+      </>
     )
 }
 

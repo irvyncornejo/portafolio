@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f05768;
 }
 
 @keyframes App-logo-spin {
@@ -50,8 +50,17 @@ body {
 .icon-bar {
   position: fixed;
   top: 50%;
-  left: 10%;
+  left: 6%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  }
+}
+
+.button-theme {
+  position: fixed;
+  top: 5%;
+  right: 6%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
