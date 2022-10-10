@@ -45,6 +45,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: #f05768;
+  font-family: 'Oswald' !important;
 }
 
 .icon-bar {

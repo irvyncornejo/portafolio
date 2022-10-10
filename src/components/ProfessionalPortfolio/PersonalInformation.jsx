@@ -1,27 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Avatar from '@mui/material/Avatar'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
 import TechStack from './TechStack'
 
 import './styles.css'
-const avatar = require('../../robelio.png')
+const photo = require('../../photo.png')
+const robelio = require('../../robelio.png') 
 
 const ProfesionalInformation = () => {
+  const [ avatar, setAvatar ] = useState(robelio)
+
     return (
       <>
-        <Avatar
-          alt="Irvyn Cornejo" 
-          src={ avatar } 
-          sx={{ width: 200, height: 200, paddingTop: '20px', paddingBottom: '20px' }}
-        />
+        <div style={
+          { 
+            paddingTop: '20px', 
+            paddingBottom: '20px' 
+          }
+        }>
+          <Avatar
+            alt="Irvyn Cornejo" 
+            src={ avatar } 
+            sx={{ width: 200, height: 200 }}
+            onMouseEnter={ () => setAvatar(photo) }
+            onMouseLeave={ () => setAvatar(robelio) }
+          />
+        </div>
         <Card className="center-column" elevation={5}>
           <CardContent className="greeting">
-            <Typography variant="h4">
-              Hola, soy Irvyn
-              <span className="wave hand" role="img">👋</span>
-            </Typography>
+            Hola, soy Irvyn
+            <span className="wave hand" role="img">👋</span>
           </CardContent>
         </Card>
         <div className="description">

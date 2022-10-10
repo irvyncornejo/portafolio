@@ -14,13 +14,13 @@ const mockProjects = [
 	{
 		name: "Iza",
 		description: "Robot Educativo para la enseñanza de STEAM",
-		img: "https://miro.medium.com/max/720/1*XOSduao7nmUZUpRmjt4zeg.jpeg",
+		img: "https://drive.google.com/uc?export=view&id=1R6nUrc0-2BKJXVB-f0EF9-zqNS5gW92A",
 		references: ['Arduino Nano', 'C++', 'Bloques', 'Sensores', 'Actuadores']
 	},
 	{
 		name: "Chimalli",
 		description: "Shield para Raspberry Pi",
-		img: "https://miro.medium.com/max/720/1*XOSduao7nmUZUpRmjt4zeg.jpeg",
+		img: "https://drive.google.com/uc?export=view&id=1R6nUrc0-2BKJXVB-f0EF9-zqNS5gW92A",
 		references: ['Raspberry Pi', 'Python ', 'IoT', 'Sensores', 'Actuadores']
 	}
 ]
@@ -53,8 +53,26 @@ const Project = (props) => {
 const Projects = () => {
     return (
       <>
-        <Divider textAlign="left" sx={{ color: pinkColor, borderColor: pinkColor, paddingTop: '30px', paddingBottom: '30px' }}>
-            <Chip label="Projects" sx={{ color: '#00c5b9', fontWeight: 'bold' , backgroundColor: 'rgba(26, 33, 46, 0.975)' }}/>
+        <Divider textAlign="left" 
+					sx={
+						{
+							color: pinkColor,
+							borderColor: pinkColor, 
+							paddingTop: '30px', 
+							paddingBottom: '30px' 
+						}
+					}
+				>
+          <Chip 
+						label="Projects" 
+						sx={
+							{ 
+								color: '#00c5b9', 
+								fontWeight: 'bold', 
+								backgroundColor: 'rgba(26, 33, 46, 0.975)' 
+							}
+						}
+					/>
         </Divider>
         {
           <Carousel>

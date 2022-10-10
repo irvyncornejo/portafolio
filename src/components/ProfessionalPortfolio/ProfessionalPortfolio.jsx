@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
@@ -11,6 +11,8 @@ import IconMenu from "../Navbar/LateralMenu"
 import '../../App.css'
 
 const ProfessionalPortFolio = () => {
+  const [ stateTheme, setStateTheme ] = useState(false)
+  const theme =  stateTheme ? <FaMoon />  : <FaSun />
     return (
       <>
         <Box sx={{ flexGrow: 1 }}>
@@ -24,8 +26,16 @@ const ProfessionalPortFolio = () => {
             <Grid item xs={2} md={2} lg={3} className="center-column button-theme">
               <Button 
                   variant="outlined" 
-                  startIcon={<FaSun />} 
-                  sx={{color: pink.A400, border: pink.A400, fontSize: 'medium' }}
+                  startIcon={ theme }
+                  sx={
+                    {
+                      color: pink.A400, 
+                      border: pink.A400, 
+                      fontSize: 'medium',
+                      textTransform: 'none'
+                    }
+                  }
+                  onClick={() => setStateTheme(!stateTheme) }
               >Theme
               </Button>
             </Grid>
