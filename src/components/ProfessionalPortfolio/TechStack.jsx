@@ -68,7 +68,7 @@ const TechStack = () => {
             )
           }
           <Divider textAlign="left" sx={{ color: pinkColor, borderColor: pinkColor, paddingTop: '30px' }}>
-            <Chip label="Hobbie" sx={{ color: '#00c5b9', fontWeight: 'bold' , backgroundColor: 'rgba(26, 33, 46, 0.975)' }}/>
+            <Chip label="Hobby" sx={{ color: '#00c5b9', fontWeight: 'bold' , backgroundColor: 'rgba(26, 33, 46, 0.975)' }}/>
           </Divider>
           {
             Object.keys(hobbieStack).map(tech => 

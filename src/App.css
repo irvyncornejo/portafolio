@@ -65,3 +65,7 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.footer-contact {
+  background-color: #1a212e;
+}
