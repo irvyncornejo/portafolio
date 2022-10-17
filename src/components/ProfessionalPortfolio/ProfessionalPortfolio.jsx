@@ -1,24 +1,27 @@
 import React, { useState } from "react"
-import Grid from '@mui/material/Grid'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
+import { Grid, Box, Button } from '@mui/material'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { pink } from '@mui/material/colors'
 
 import ProfesionalInformation from "./PersonalInformation"
 import IconMenu from "../Navbar/LateralMenu"
+import Footer from "../Footer"
 
 import '../../App.css'
 
 const ProfessionalPortFolio = () => {
   const [ stateTheme, setStateTheme ] = useState(false)
   const theme =  stateTheme ? <FaMoon />  : <FaSun />
+
+  const matches = useMediaQuery('(min-width:650px)')
+
     return (
       <>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={2} md={2} lg={3} align="center" className="center-column">
-              <IconMenu />
+            { matches ? <IconMenu /> : '' }
             </Grid>
             <Grid item xs={8} md={8} lg={6} align="center" className="center-column">
               <ProfesionalInformation />
@@ -40,6 +43,7 @@ const ProfessionalPortFolio = () => {
               </Button>
             </Grid>
           </Grid>
+          { !matches ? <Footer /> : '' }
         </Box>
       </>
     )
