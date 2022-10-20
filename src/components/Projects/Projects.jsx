@@ -54,17 +54,17 @@ const Project = (props) => {
 }
 
 const Projects = () => {
-    return (
-      <>
-        <Container maxWidth='sm xs' sx={{paddingTop: '20px'}}>
-          <Grid container spacing={2}>
-          {
-        	  mockProjects.map((item, value) => <Project key={value} item={item} /> )
-          }
-          </Grid>
-        </Container>
-      </>
-    )
+  return (
+    <>
+      <Container maxWidth='sm xs' sx={{paddingTop: '20px'}}>
+        <Grid container spacing={2}>
+        {
+          mockProjects.map((item, value) => <Project key={value} item={item} /> )
+        }
+        </Grid>
+      </Container>
+    </>
+  )
 }
 
 export default Projects

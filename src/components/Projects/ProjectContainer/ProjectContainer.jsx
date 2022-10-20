@@ -1,6 +1,6 @@
+import React from "react"
 import { Grid, Paper } from "@mui/material"
 import { Container } from "@mui/system"
-import React from "react"
 
 const ProjectContainer = () => {
   return (
