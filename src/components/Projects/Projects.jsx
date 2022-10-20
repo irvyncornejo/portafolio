@@ -1,20 +1,21 @@
 import React from "react"
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
-import { CardActionArea } from '@mui/material'
-import Carousel from 'react-material-ui-carousel'
-import Divider from '@mui/material/Divider'
-import Chip from '@mui/material/Chip'
-import Paper from '@mui/material/Paper'
+import { 
+  CardActionArea, 
+  Grid,
+  CardMedia, 
+  CardContent, 
+  Card, 
+  Container,
+  Chip,
+  Divider, 
+  Box
+} from '@mui/material'
 
-const pinkColor = '#00c5b9'
 const mockProjects = [
 	{
 		name: "Iza",
 		description: "Robot Educativo para la enseñanza de STEAM",
-		img: "https://drive.google.com/uc?export=view&id=1R6nUrc0-2BKJXVB-f0EF9-zqNS5gW92A",
+		img: "https://drive.google.com/uc?export=view&id=1WJEKmF4CoVzNp4sEO04E1GuEgW_jQi2T",
 		references: ['Arduino Nano', 'C++', 'Bloques', 'Sensores', 'Actuadores']
 	},
 	{
@@ -27,58 +28,41 @@ const mockProjects = [
 
 const Project = (props) => {
     return (
-			<Paper sx={{ background: '#1a212e' }}>
-				<Card sx={{ maxWidth: '100%', minHeight: '250px' }}>
-					<CardActionArea>
+			<Grid item xs={12} md={4} lg={3} key={props.item.name}>
+        <Card sx={{ maxWidth: '100%', minHeight: '100%', backgroundColor: 'transparent' }}>
+					<CardActionArea sx={{backgroundColor: 'transparent'}} href='/proyecto'>
 						<CardMedia
 							component="img"
-							height="140"
+							height="160"
 							image={props.item.img}
 							alt={props.item.name}
 						/>
-						<CardContent>
-							<Typography gutterBottom variant="h5" component="div">
-								{props.item.name}
-							</Typography>
-							<Typography variant="body2" color="text.secondary">
-								{props.item.description}
-							</Typography>
+						<CardContent sx={{backgroundColor: 'transparent', color: '#00c5b9'}}>
+								<h1>{props.item.name}</h1>
+								<h3>{props.item.description}</h3>
+                <Divider/>
+                <Box sx={{paddingTop: '10px'}}>
+                  {
+                    props.item.references.map((ref) => <Chip label={ref} sx={{color: '#f50057'}}/>)
+                  }
+                </Box>
 						</CardContent>
 					</CardActionArea>
 				</Card>
-			</Paper>
+      </Grid>
     )
 }
 
 const Projects = () => {
     return (
       <>
-        <Divider textAlign="left" 
-					sx={
-						{
-							color: pinkColor,
-							borderColor: pinkColor, 
-							paddingTop: '30px', 
-							paddingBottom: '30px' 
-						}
-					}
-				>
-          <Chip 
-						label="Projects" 
-						sx={
-							{ 
-								color: '#00c5b9', 
-								fontWeight: 'bold', 
-								backgroundColor: 'rgba(26, 33, 46, 0.975)' 
-							}
-						}
-					/>
-        </Divider>
-        {
-          <Carousel>
-            { mockProjects.map((item, value) => <Project key={value} item={item} /> ) }
-          </Carousel>
-        }
+        <Container maxWidth='sm xs' sx={{paddingTop: '20px'}}>
+          <Grid container spacing={2}>
+          {
+        	  mockProjects.map((item, value) => <Project key={value} item={item} /> )
+          }
+          </Grid>
+        </Container>
       </>
     )
 }

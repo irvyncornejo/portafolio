@@ -10,7 +10,7 @@ import { pink } from '@mui/material/colors'
 const iconsLateralMenu = {
   'Ver Github': [SiGithub, 'https://github.com/irvyncornejo'],
   'Ver LinkedIn': [SiLinkedin, 'https://www.linkedin.com/in/irvyn-s%C3%A1nchez-cornejo-2a2593191/'],
-  'Ver Proyectos': [MdFolder, '#']
+  'Ver Proyectos': [MdFolder, '/proyectos']
 }
 
 const theme = {
