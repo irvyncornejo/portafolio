@@ -6,7 +6,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { Icon, IconButton, Tooltip } from '@mui/material'
 import { pink } from '@mui/material/colors'
+import { MdMail } from "react-icons/md"
 
 import '../ProfessionalPortfolio/styles.css'
 
@@ -21,17 +23,19 @@ const FormContact = () => {
 
   return (
     <div>
-      <Button 
-        variant="outlined"
-        sx={{ color: pink.A400, border: pink.A400 }} 
-        onClick={ () => setOpen(!open) }
-      >
-        Contactar
-      </Button>
+      <Tooltip title='Contactar'>
+        <IconButton onClick={ () => setOpen(!open) } >
+          <Icon
+            sx={{ color: pink.A400, border: pink.A400 }}
+            as={ MdMail }
+            fontSize='large'
+          />
+        </IconButton>
+      </Tooltip>
       <Dialog open={open} onClose={() => setOpen(!open)}>
-        <DialogTitle sx={{...theme}} >Contactar</DialogTitle>
-        <DialogContent sx={{...theme}}>
-          <DialogContentText sx={{color: '#efefefff', fontFamily: 'Oswald'}}>
+        <DialogTitle>Contactar</DialogTitle>
+        <DialogContent>
+          <DialogContentText sx={{fontFamily: 'Oswald'}}>
             Hola, por favor ingresa tu email, 
             número teléfonico y alguna descripción 
             para poder entender la razón de contacto.
@@ -55,10 +59,18 @@ const FormContact = () => {
             fullWidth
             variant="standard"
           />
+          <TextField
+            id="multiline"
+            label="Descripción..."
+            multiline
+            maxRows={4}
+            fullWidth
+            variant="standard"
+        />
         </DialogContent>
-        <DialogActions sx={{...theme}}>
-          <Button onClick={() => setOpen(!open)}>Cancel</Button>
-          <Button onClick={() => setOpen(!open)}>Subscribe</Button>
+        <DialogActions>
+          <Button onClick={() => setOpen(!open)}>Cancelar</Button>
+          <Button onClick={() => setOpen(!open)}>Contactar</Button>
         </DialogActions>
       </Dialog>
     </div>

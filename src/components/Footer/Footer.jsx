@@ -3,9 +3,8 @@ import BottomNavigation from '@mui/material/BottomNavigation'
 
 import '../../App.css'
 
-import ReferencesLinks from "../ReferencesLinks"
 
-const Footer = () => {
+const Footer = (props) => {
 
   return (
     <>
@@ -15,7 +14,7 @@ const Footer = () => {
           backgroundColor:'transparent', 
           paddingTop: '12px' 
         }}>
-        <ReferencesLinks />
+        { props.children }
       </BottomNavigation>
       </div>
     </>

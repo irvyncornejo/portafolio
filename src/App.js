@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ProfessionalPortfolio  from './components/ProfessionalPortfolio'
-import Projects from './components/Projects/Projects';
+import Projects from './components/Projects/Projects'
+import ProjectContainer from './components/Projects/ProjectContainer'
+
 const App = () => {
   return (
     <>
@@ -10,7 +12,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<ProfessionalPortfolio />} />
-          <Route path='/projects' element={<Projects />} />
+          <Route path='/proyectos' element={<Projects />} />
+          <Route path='/proyecto' element={<ProjectContainer />} />
           <Route path='*' element={<>NOT FOUND</>} />
         </Routes>
       </BrowserRouter>
