@@ -15,13 +15,13 @@ const mockProjects = [
 	{
 		name: "Iza",
 		description: "Robot Educativo para la enseñanza de STEAM",
-		img: "https://drive.google.com/uc?export=view&id=1WJEKmF4CoVzNp4sEO04E1GuEgW_jQi2T",
+		img: "https://drive.google.com/uc?export=view&id=13hOb9hXoF768yt4zBdlQotkfdlEWHSPE",
 		references: ['Arduino Nano', 'C++', 'Bloques', 'Sensores', 'Actuadores']
 	},
 	{
 		name: "Chimalli",
 		description: "Shield para Raspberry Pi",
-		img: "https://drive.google.com/uc?export=view&id=1R6nUrc0-2BKJXVB-f0EF9-zqNS5gW92A",
+		img: "https://drive.google.com/uc?export=view&id=1IJD0Np3eJFKLC__IEAAjjnsxgtDNTEXA",
 		references: ['Raspberry Pi', 'Python ', 'IoT', 'Sensores', 'Actuadores']
 	}
 ]
@@ -37,7 +37,12 @@ const Project = (props) => {
 							image={props.item.img}
 							alt={props.item.name}
 						/>
-						<CardContent sx={{backgroundColor: 'transparent', color: '#00c5b9'}}>
+						<CardContent 
+              sx={{
+                backgroundColor: '#1a212ef9', 
+                color: '#efefefff',
+              }}
+            >
 								<h1>{props.item.name}</h1>
 								<h3>{props.item.description}</h3>
                 <Divider/>
