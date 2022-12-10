@@ -51,7 +51,6 @@ const FormContact = () => {
             color='primary'
           />
           <TextField
-            autoFocus
             margin="dense"
             id="phone"
             label="Teléfono"

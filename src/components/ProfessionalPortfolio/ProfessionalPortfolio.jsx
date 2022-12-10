@@ -25,7 +25,7 @@ const ProfessionalPortFolio = () => {
       <>
         <Box sx={{ flexGrow: 1 }}>
           <div className="center-column button-theme">
-            <Button 
+            {/* <Button
               variant="outlined" 
               startIcon={ theme }
               sx={
@@ -41,8 +41,8 @@ const ProfessionalPortFolio = () => {
                   handleTheme()
                 }
               }
-            >Theme
-            </Button>
+              >Theme
+            </Button> */}
           </div>
           <Grid container spacing={2}>
             <Grid item xs={1} md={2} lg={3} align="center" className="center-column">
