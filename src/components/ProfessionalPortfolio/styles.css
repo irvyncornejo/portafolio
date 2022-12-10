@@ -1,7 +1,4 @@
 .greeting {
-  border: 1px solid #1a212ef9;
-  border-radius: 1px;
-  border-color: rgba(26, 33, 46, 0.975);
   background-color: rgba(26, 33, 46, 0.975);
   color: #efefefff;
   font-family: 'Oswald' !important;
@@ -14,10 +11,11 @@
 }
 .description {
   padding-top: 30px;
+  padding-bottom: 25px;
   color: #efefefff !important;
-  text-align: justify;
+  text-align: center;
   line-height: 140%;
-  font-size: 19px;
+  font-size: 23px;
   font-family: 'Oswald' !important;
 }
 
